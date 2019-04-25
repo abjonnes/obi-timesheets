@@ -1,0 +1,24 @@
+.header {
+  font-size: 24pt;
+}
+
+.row {
+  margin-top: 75px;
+}
+
+.subtext {
+  font-size: 10pt;
+}
+
+.card {
+  width: 198px;
+}
+
+
+// bootstrap
+
+$theme-colors: (
+  primary: #e2231b
+)!default;
+
+@import '~bootstrap/scss/bootstrap.scss'; 
