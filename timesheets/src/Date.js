@@ -41,15 +41,15 @@ class Date extends React.Component {
           {" "}HOLIDAY{" "}
           <i className="em em-confetti_ball" />
           </div> : 
-        <div>Any BT?
         <ButtonGroup
           type="radio"
           name="s"
           vertical
           toggle
+          className="mt-3"
         >
           <BTButton value="full" groupValue={this.state.selected} onClick={this.onClick} name={this.props.id}>
-            Full day
+            Full day off
           </BTButton>
           <ButtonGroup
             type="radio"
@@ -58,14 +58,14 @@ class Date extends React.Component {
             toggle
           >
             <BTButton value="am" groupValue={this.state.selected} onClick={this.onClick} name={this.props.id}>
-              AM only
+              AM off
             </BTButton>
             <BTButton value="pm" groupValue={this.state.selected} onClick={this.onClick} name={this.props.id}>
-              PM only
+              PM off
             </BTButton>
           </ButtonGroup>
         </ButtonGroup>
-      </div>}
+     }
       </Card.Body>
     </Card>
   )
