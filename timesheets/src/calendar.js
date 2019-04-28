@@ -1,5 +1,11 @@
 import moment from 'moment';
 
+
+const holidays = [
+  "270519", "040719", "020919", "141019", "281119", "251219"
+]
+
+
 const getWeek = start => {
   const days = []
   for (let i = 0; i < 5; i++) {
@@ -8,7 +14,7 @@ const getWeek = start => {
       id: day.format('DDMMYY'),
       dow: day.format('dddd'),
       text: day.format('MMMM D'),
-      holiday: false
+      holiday: holidays.indexOf(day.format('DDMMYY')) !== -1
     })
   }
   return days
