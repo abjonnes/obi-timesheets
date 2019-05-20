@@ -30,10 +30,7 @@ def create_timesheet(name, sunday_date, bts):
     ws.cell(10, 1, value=sunday_date)
     for d in range(5):
         weekday = sunday_date + timedelta(days=d+1)
-        if bts.get(weekday) == "holiday":
-            ws.cell(d + 11, 3, value="")
-            ws.cell(d + 11, 4, value="")
-        elif bts.get(weekday) == "full":
+        if bts.get(weekday) in ("holiday", "full"):
             ws.cell(d + 11, 3, value="")
             ws.cell(d + 11, 4, value="")
             ws.cell(d + 11, 7, value=8)
