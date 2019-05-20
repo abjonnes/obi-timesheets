@@ -32,7 +32,7 @@ class Timesheets extends React.Component {
     return (
       <Form inline method="post" action="/service">
         <input type="hidden" name="startDate" value={weeks[this.state.week][0].id} />
-        <Container className="text-center">
+        <Container className="text-center mb-5">
           <Row className="header">
             <Col>
               Create a timesheet for{" "}
